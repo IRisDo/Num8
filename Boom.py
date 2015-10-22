@@ -14,13 +14,13 @@ while i != -1 and j != -1:
     
 # Giai thuat de qui
 def Boom(i,j):
-    while i <= 10 and j <= 10 and L[i][j] != 0: # Dieu kien de (i,j) khong vuot qua 10x10 va vi tri (i,j) co bom
+    while i <= 10 and i >= 0 and j <= 10 and j >= 0 and L[i][j] != 0: # Dieu kien de (i,j) khong vuot qua 10x10 va vi tri (i,j) co bom
         L[i][j] = 0                             # Bom no
         print('(',i,' ',j,')')                  # in ra vi tri no theo thu tu truoc sau
-        Boom(abs(i+1),abs(j))                   # xet cac o ke ben
-        Boom(abs(i),abs(j-1))
-        Boom(abs(i-1),abs(j))
-        Boom(abs(i),abs(j+1))
+        Boom(i+1,j)                             # xet cac o ke ben
+        Boom(i,j-1)
+        Boom(i-1,j)
+        Boom(i,j+1)
         
                     
 # Phan chuong trinh chinh
